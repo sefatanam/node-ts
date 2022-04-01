@@ -1,15 +1,10 @@
-import express from "express";
-
-require("dotenv").config();
-
+import express from 'express';
+require('dotenv').config();
 const app = express();
+const courses = require('./courses/course.route');
 
-app.get("/hw", (request, response) => {
-  try {
-    return response.send({ name: "I'm ok" });
-  } catch (err) {
-    return response.status(400).send("Somethin went wrong");
-  }
-});
+require('./database')();
+app.use(express.json());
+app.use('/course', courses);
 
 app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}`));

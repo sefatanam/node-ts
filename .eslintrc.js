@@ -1,24 +1,21 @@
 module.exports = {
-  env: {
-    node: true,
-    es2021: true,
+  'env': {
+    'node': true,
+    'es2021': true,
   },
-  extends: [
-    "airbnb-base",
+  'extends': [
+    'google',
   ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+    'sourceType': 'module',
   },
-  plugins: [
-    "@typescript-eslint",
+  'plugins': [
+    '@typescript-eslint',
   ],
-  rules: {
-    "no-console": "off",
-    quotes: [
-      "error",
-      "double",
-    ],
+  'rules': {
+    'max-len': ['error', {'code': 120}],
+    'new-cap': ['error', {'newIsCap': true, 'properties': false}],
   },
 };
