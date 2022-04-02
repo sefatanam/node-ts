@@ -6,7 +6,7 @@ module.exports = function() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }).then(() => {
-    console.log(`Database is connected. Running on [ ${process.env.NODE_ENV?.toUpperCase()} ] environment.`);
+    console.log(`Database is connected on : ${process.env.NODE_ENV?.toUpperCase()}`);
   }).catch((err:any) => {
     console.log(err.message);
   });
