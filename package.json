@@ -8,8 +8,10 @@
     "lint": "eslint . --ext .ts --fix",
     "dev": "tsc && concurrently \"tsc -w\" \"nodemon dist/index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts",
-    "dev-1": "nodemon -x ts-node src/index.ts"
+    "start": "node dist/index.js",
+    "dev-1": "nodemon -x ts-node src/index.ts",
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
